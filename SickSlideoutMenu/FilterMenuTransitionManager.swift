@@ -21,7 +21,7 @@ class FilterMenuTransitionManager: NSObject, UIViewControllerAnimatedTransitioni
   var snapshot : UIView? {
     didSet {
       if let delegate = delegate {
-        let tapGestureRecognizer = UITapGestureRecognizer(target: delegate, action: "dismiss")
+        let tapGestureRecognizer = UITapGestureRecognizer(target: delegate, action: Selector("dismiss"))
         snapshot?.addGestureRecognizer(tapGestureRecognizer)
       }
     }
@@ -67,10 +67,17 @@ class FilterMenuTransitionManager: NSObject, UIViewControllerAnimatedTransitioni
         if !self.isPresenting {
           self.snapshot?.removeFromSuperview()
         }
-        
     })
-    
   }
-    
-   
+  
+  func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    isPresenting = true
+    return self
+  }
+  
+  func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+    isPresenting = false
+    return self
+  }
+
 }
