@@ -15,6 +15,7 @@
 		96C3E1BD1D9AED95003F84DC /* SickSlideoutMenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C3E1BC1D9AED95003F84DC /* SickSlideoutMenuUITests.swift */; };
 		96C3E1CF1D9AF7A3003F84DC /* FilterMenuTransitionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C3E1CE1D9AF7A3003F84DC /* FilterMenuTransitionManager.swift */; };
 		96C3E1D11D9B0229003F84DC /* ExploreRoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C3E1D01D9B0229003F84DC /* ExploreRoutesViewController.swift */; };
+		96C3E1D31D9B06C6003F84DC /* FiltersMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C3E1D21D9B06C6003F84DC /* FiltersMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		96C3E1BE1D9AED95003F84DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96C3E1CE1D9AF7A3003F84DC /* FilterMenuTransitionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterMenuTransitionManager.swift; sourceTree = "<group>"; };
 		96C3E1D01D9B0229003F84DC /* ExploreRoutesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreRoutesViewController.swift; sourceTree = "<group>"; };
+		96C3E1D21D9B06C6003F84DC /* FiltersMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FiltersMenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				96C3E1A81D9AED95003F84DC /* Info.plist */,
 				96C3E1CE1D9AF7A3003F84DC /* FilterMenuTransitionManager.swift */,
 				96C3E1D01D9B0229003F84DC /* ExploreRoutesViewController.swift */,
+				96C3E1D21D9B06C6003F84DC /* FiltersMenuViewController.swift */,
 			);
 			path = SickSlideoutMenu;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				96C3E1CF1D9AF7A3003F84DC /* FilterMenuTransitionManager.swift in Sources */,
 				96C3E1D11D9B0229003F84DC /* ExploreRoutesViewController.swift in Sources */,
 				96C3E19D1D9AED95003F84DC /* AppDelegate.swift in Sources */,
+				96C3E1D31D9B06C6003F84DC /* FiltersMenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

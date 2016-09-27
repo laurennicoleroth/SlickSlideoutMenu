@@ -21,7 +21,7 @@ class FilterMenuTransitionManager: NSObject, UIViewControllerAnimatedTransitioni
   var snapshot : UIView? {
     didSet {
       if let delegate = delegate {
-        let tapGestureRecognizer = UITapGestureRecognizer(target: delegate, action: Selector("dismiss"))
+        let tapGestureRecognizer = UITapGestureRecognizer(target: delegate, action: Selector(("dismiss")))
         snapshot?.addGestureRecognizer(tapGestureRecognizer)
       }
     }

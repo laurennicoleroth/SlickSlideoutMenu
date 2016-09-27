@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Explore-->
+        <!--View Controller-->
         <scene sceneID="sYy-Pk-hCs">
             <objects>
                 <viewController id="0vZ-VM-dDD" sceneMemberID="viewController">
@@ -29,15 +29,43 @@
                                 <color key="backgroundColor" red="0.79192571989528793" green="0.79192571989528793" blue="0.79192571989528793" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="filters"/>
+                                <connections>
+                                    <segue destination="we9-q0-ioT" kind="presentation" id="6cH-1l-uJK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Explore" id="mSb-zK-gm6"/>
+                    <navigationItem key="navigationItem" id="mSb-zK-gm6"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4b-yq-Gdk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1152.8" y="179.46026986506749"/>
+        </scene>
+        <!--Filters Menu View Controller-->
+        <scene sceneID="gU8-7L-lGb">
+            <objects>
+                <viewController id="we9-q0-ioT" customClass="FiltersMenuViewController" customModule="SickSlideoutMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hbl-Tb-Jgo"/>
+                        <viewControllerLayoutGuide type="bottom" id="qx0-15-JpP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U9r-K8-90l">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsN-hf-1M6">
+                                <frame key="frameInset" minX="167" minY="28" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Apply"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oMM-nq-NrK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1153" y="-474"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3wP-e8-xRb">

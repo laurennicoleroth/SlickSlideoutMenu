@@ -8,17 +8,25 @@
 
 import UIKit
 
-class ExploreRoutesViewController: UIViewController {
+class ExploreRoutesViewController: UIViewController, FilterMenuTransitionManagerDelegate {
+  
+    let filterTransitionManager = FilterMenuTransitionManager()
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-
+      super.viewDidLoad()
+      
+      self.title = "Explore"
     }
 
     override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+      super.didReceiveMemoryWarning()
       
     }
   
+    func dismiss() {
+      dismiss(animated: true, completion: nil)
+    }
+  
+    
     
 }
