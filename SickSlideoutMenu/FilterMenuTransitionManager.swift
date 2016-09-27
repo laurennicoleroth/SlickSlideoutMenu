@@ -34,11 +34,41 @@ class FilterMenuTransitionManager: NSObject, UIViewControllerAnimatedTransitioni
   }
   
   func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+    
+    //Set fromView, toView, and container for transitionContext
     let fromView = transitionContext.view(forKey: UITransitionContextViewKey.from)
     let toView = transitionContext.view(forKey: UITransitionContextViewKey.to)
+    let container = transitionContext.containerView
     
+    let moveDown = CGAffineTransform(translationX: 0, y: container.frame.height - 150)
+    let moveUp = CGAffineTransform(translationX: 0, y: -50)
     
-   let container = transitionContext.containerView
+    if isPresenting {
+      toView?.transform = moveUp
+      snapshot = fromView?.snapshotView(afterScreenUpdates: true)
+      container.addSubview(toView!)
+      container.addSubview(snapshot!)
+    }
+    
+    UIView.animate(withDuration: 0.5, delay: 0.3, options: [.repeat, .curveEaseOut, .autoreverse], animations: {
+      
+      if self.isPresenting {
+        self.snapshot?.transform = moveDown
+        toView?.transform = CGAffineTransform.identity
+      } else {
+        self.snapshot?.transform = moveUp
+        toView?.transform = CGAffineTransform.identity
+      }
+      
+      }, completion: { finished in
+        
+          transitionContext.completeTransition(true)
+        
+        if !self.isPresenting {
+          self.snapshot?.removeFromSuperview()
+        }
+        
+    })
     
   }
     
